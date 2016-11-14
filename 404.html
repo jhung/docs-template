@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<title>404 - Page Not Found | Documentation Template</title>
+
+<!-- FLUID-5639:
+github pages serves this 404 document in place of the requested missing
+document. Thus we do not know in advance the path to the local
+Foundation and CSS files.
+
+Therefore we use absolute links to files to ensure everything is served
+properly.
+
+https://issues.fluidproject.org/browse/FLUID-5639 -->
+
+<link rel="icon" type="image/png" href="/images/favico.png" />
+
+<link rel="stylesheet" href="/lib/infusion/src/lib/normalize/css/normalize.css" />
+<link rel="stylesheet" href="/lib/foundation/foundation-flex.min.css" />
+
+<link rel="stylesheet" type="text/css" href="/lib/infusion/src/framework/preferences/css/Enactors.css" />
+<link rel="stylesheet" type="text/css" href="/lib/infusion/src/framework/preferences/css/PrefsEditor.css" />
+<link rel="stylesheet" type="text/css" href="/lib/infusion/src/framework/preferences/css/SeparatedPanelPrefsEditor.css" />
+<link rel="stylesheet" type="text/css" href="/css/docs-template.css" />
+
+<script type="text/javascript" src="/lib/infusion/infusion-all.js"></script>
+<script type="text/javascript" src="/lib/foundation/foundation.min.js"></script>
+
+    </head>
+
+    <body class="docs-template docs-template-404">
+
+        <div class="docs-template row">
+
+            <!-- Skip Link -->
+            <nav id="skip" class="fl-inverted-color">
+                <a href="#content" class="docs-template-skip-content">Skip to Content</a>
+            </nav>
+            <!-- END skip link -->
+
+            <header class="small-12 ignore-for-TOC fl-inverted-color">
+    <!-- BEGIN markup for Preference Editor -->
+    <div class="flc-prefsEditor-separatedPanel fl-prefsEditor-separatedPanel small-12 columns">
+        <!-- This is the div that will contain the Preference Editor component -->
+        <div class="flc-slidingPanel-panel flc-prefsEditor-iframe"></div>
+
+        <!-- This div is for the sliding panel that shows and hides the Preference Editor controls -->
+        <div class="fl-panelBar">
+            <span class="fl-prefsEditor-buttons">
+                <button id="reset" class="flc-prefsEditor-reset fl-prefsEditor-reset"><span class="fl-icon-undo"></span> Reset</button>
+                <button id="show-hide" class="flc-slidingPanel-toggleButton fl-prefsEditor-showHide"> Show/Hide</button>
+            </span>
+        </div>
+    </div>
+    <!-- END markup for Preference Editor -->
+
+    <div class="docs-template-header  small-12 columns">
+        <a class="docs-template-logo" href="index.html" title="Home: Documentation Template">
+            <span aria-hidden="true">
+                <h1>Documentation Template</h1>
+            </span>
+        </a>
+    </div>
+
+    <nav class="small-12 columns">
+        <ul class="no-bullet align-spaced">
+        
+        
+            
+                <li class="text-center"><a href="index.html" title="Fruits">Fruits</a></li>
+            
+        
+            
+                <li class="text-center"><a href="index-veggies.html" title="Veggies">Veggies</a></li>
+            
+        
+            
+                <li class="text-center"><a href="index-desserts.html" title="Desserts">Desserts</a></li>
+            
+        
+        </ul>
+    </nav>
+</header>
+
+
+            <div class="docs-template-contentArea small-12">
+                <article id="content">
+                    <h1>404 - Page Not Found</h1>
+
+<div class="flc-toc-tocContainer docs-template-uio-toc"></div>
+
+<div class="docs-template-articleContent">
+    <p>Check the entered URL, or go to the <a href="/">Front Page</a>.</p>
+
+</div>
+
+<p class="docs-template-githubLink">
+    <a href="https://github.com/fluid-project/docs-template/blob/master/src/documents/404.md" rel="nofollow" target="_blank" class="link-external">Edit this Page on GitHub</a>
+</p>
+
+                </article>
+            </div>
+
+            <footer class="small-12 docs-template-footer fl-inverted-color">
+    Created by the <a href="http://fluidproject.org/" rel="nofollow" target="_blank">Fluid Project</a>,<br/>
+    a project of the <a href="http://idrc.ocad.ca/" rel="nofollow" target="_blank">Inclusive Design Research Centre</a>
+    at <a href="http://www.ocadu.ca/" target="_blank">OCAD University</a>.
+</footer>
+
+            <script type="text/javascript">
+    $(document).foundation();
+
+    $(document).ready(function () {
+        libPath = "./";
+
+        fluid.uiOptions.prefsEditor(".flc-prefsEditor-separatedPanel", {
+            terms: {
+                templatePrefix: libPath + "lib/infusion/src/framework/preferences/html",
+                messagePrefix: libPath + "lib/infusion/src/framework/preferences/messages",
+            },
+            tocTemplate: libPath + "lib/infusion/src/components/tableOfContents/html/TableOfContents.html",
+            ignoreForToC: {
+                "ignore": ".ignore-for-TOC"
+            }
+        });
+    });
+</script>
+
+        </div>
+    </body>
+</html>
